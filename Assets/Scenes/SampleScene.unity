@@ -123,6 +123,48 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &369759978 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5555781287085290525, guid: 5ba74a5f156994fb5bd3a6403e35eac4, type: 3}
+  m_PrefabInstance: {fileID: 5555781286849749751}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &369759983
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 369759978}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 4
+--- !u!70 &369759984
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 369759978}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.039699912, y: -0.08270806}
+  m_Size: {x: 0.43096852, y: 0.8345839}
+  m_Direction: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -9705,11 +9747,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5555781287085290524, guid: 5ba74a5f156994fb5bd3a6403e35eac4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.146
       objectReference: {fileID: 0}
     - target: {fileID: 5555781287085290524, guid: 5ba74a5f156994fb5bd3a6403e35eac4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5
+      value: 2.65
       objectReference: {fileID: 0}
     - target: {fileID: 5555781287085290524, guid: 5ba74a5f156994fb5bd3a6403e35eac4, type: 3}
       propertyPath: m_LocalPosition.z
