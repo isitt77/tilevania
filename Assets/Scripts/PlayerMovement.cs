@@ -36,6 +36,7 @@ public class PlayerMovement : MonoBehaviour
         Vector2 playerVelocity = new Vector2(moveInput.x * runSpeed, rb2d.velocity.y);
         rb2d.velocity = playerVelocity;
 
+        // Player must have movevment (abs value) greater than 0 (Epsilon) to initiate running animation.
         bool hasVelocityX = Mathf.Abs(rb2d.velocity.x) > Mathf.Epsilon;
         animator.SetBool("isRunning", hasVelocityX);
     }
