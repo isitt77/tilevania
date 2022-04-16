@@ -9699,6 +9699,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 369759983, guid: 5ba74a5f156994fb5bd3a6403e35eac4, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 369759983, guid: 5ba74a5f156994fb5bd3a6403e35eac4, type: 3}
+      propertyPath: m_UseAutoMass
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 369759985, guid: 5ba74a5f156994fb5bd3a6403e35eac4, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5555781287085290524, guid: 5ba74a5f156994fb5bd3a6403e35eac4, type: 3}
       propertyPath: m_RootOrder
       value: 2
