@@ -36,14 +36,8 @@ public class PlayerMovement : MonoBehaviour
         Vector2 playerVelocity = new Vector2(moveInput.x * runSpeed, rb2d.velocity.y);
         rb2d.velocity = playerVelocity;
 
-        if(Mathf.Abs(rb2d.velocity.x) > Mathf.Epsilon)
-        {
-            animator.SetBool("isRunning", true);
-        }
-        else
-        {
-            animator.SetBool("isRunning", false);
-        }
+        bool hasVelocityX = Mathf.Abs(rb2d.velocity.x) > Mathf.Epsilon;
+        animator.SetBool("isRunning", hasVelocityX);
     }
 
     void FlipSprite()
