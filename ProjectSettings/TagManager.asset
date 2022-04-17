@@ -12,7 +12,7 @@ TagManager:
   - Water
   - UI
   - Ground
-  - 
+  - Climbing
   - 
   - 
   - 
@@ -46,6 +46,9 @@ TagManager:
     locked: 0
   - name: Water Layer
     uniqueID: 3710827675
+    locked: 0
+  - name: Ladder
+    uniqueID: 385016523
     locked: 0
   - name: Platform Layer
     uniqueID: 3573066589
