@@ -37,12 +37,14 @@ public class PlayerMovement : MonoBehaviour
 
     void OnJump(InputValue value)
     {
-        if (!capCollider2d.IsTouchingLayers(LayerMask.GetMask("Ground")))
-        {
-            return;
-        }
+        //if (!capCollider2d.IsTouchingLayers(LayerMask.GetMask("Ground")))
+        //{
+        //    return;
+        //}
 
-        if (value.isPressed)
+        bool onGround = capCollider2d.IsTouchingLayers(LayerMask.GetMask("Ground"));
+
+        if (onGround && value.isPressed)
         {
             rb2d.velocity += new Vector2(rb2d.velocity.x, jumpSpeed);
         }
