@@ -9855,9 +9855,17 @@ PrefabInstance:
       propertyPath: m_UseAutoMass
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 369759983, guid: 5ba74a5f156994fb5bd3a6403e35eac4, type: 3}
+      propertyPath: m_GravityScale
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 369759985, guid: 5ba74a5f156994fb5bd3a6403e35eac4, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 369759986, guid: 5ba74a5f156994fb5bd3a6403e35eac4, type: 3}
+      propertyPath: jumpSpeed
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 5555781287085290524, guid: 5ba74a5f156994fb5bd3a6403e35eac4, type: 3}
       propertyPath: m_RootOrder

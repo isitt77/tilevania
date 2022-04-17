@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] float runSpeed = 10f;
+    [SerializeField] float jumpSpeed = 5f;
 
     Vector2 moveInput;
     Rigidbody2D rb2d;
@@ -25,10 +26,19 @@ public class PlayerMovement : MonoBehaviour
         FlipSprite();
     }
 
+
     void OnMove(InputValue value)
     {
         moveInput = value.Get<Vector2>();
         Debug.Log(moveInput);
+    }
+
+    void OnJump(InputValue value)
+    {
+        if (value.isPressed)
+        {
+            rb2d.velocity += new Vector2(rb2d.velocity.x, jumpSpeed);
+        }
     }
 
     void Run()
