@@ -9,6 +9,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float jumpSpeed = 5f;
     [SerializeField] float climbSpeed = 6f;
 
+    float normalGravity;
+    float ladderGravity = 0f;
+
     Vector2 moveInput;
     Rigidbody2D rb2d;
     Animator animator;
@@ -20,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
         rb2d = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         capCollider2d = GetComponent<CapsuleCollider2D>();
+        normalGravity = rb2d.gravityScale;
     }
 
     // Update is called once per frame
@@ -81,6 +85,11 @@ public class PlayerMovement : MonoBehaviour
         if (onLadder)
         {
             rb2d.velocity = new Vector2(rb2d.velocity.x, moveInput.y * climbSpeed);
+            rb2d.gravityScale = ladderGravity;
+        }
+        else
+        {
+            rb2d.gravityScale = normalGravity;
         }
     }
 }
