@@ -11,12 +11,14 @@ public class PlayerMovement : MonoBehaviour
     Vector2 moveInput;
     Rigidbody2D rb2d;
     Animator animator;
+    CapsuleCollider2D capCollider2d;
 
     // Start is called before the first frame update
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        capCollider2d = GetComponent<CapsuleCollider2D>();
     }
 
     // Update is called once per frame
@@ -35,6 +37,11 @@ public class PlayerMovement : MonoBehaviour
 
     void OnJump(InputValue value)
     {
+        if (!capCollider2d.IsTouchingLayers(LayerMask.GetMask("Ground")))
+        {
+            return;
+        }
+
         if (value.isPressed)
         {
             rb2d.velocity += new Vector2(rb2d.velocity.x, jumpSpeed);
