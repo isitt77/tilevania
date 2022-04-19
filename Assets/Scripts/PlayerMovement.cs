@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody2D rb2d;
     Animator animator;
     CapsuleCollider2D capCollider2d;
+    BoxCollider2D feetCollider2d;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
         rb2d = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         capCollider2d = GetComponent<CapsuleCollider2D>();
+        feetCollider2d = GetComponent<BoxCollider2D>();
         normalGravity = rb2d.gravityScale;
     }
 
@@ -48,7 +50,7 @@ public class PlayerMovement : MonoBehaviour
         //    return;
         //}
 
-        bool onGround = capCollider2d.IsTouchingLayers(LayerMask.GetMask("Ground"));
+        bool onGround = feetCollider2d.IsTouchingLayers(LayerMask.GetMask("Ground"));
 
         if(onGround && value.isPressed)
         {
