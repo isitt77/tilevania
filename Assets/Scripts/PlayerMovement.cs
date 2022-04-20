@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float runSpeed = 10f;
     [SerializeField] float jumpSpeed = 5f;
     [SerializeField] float climbSpeed = 6f;
+    [SerializeField] Vector2 deathKick = new Vector2(10f, 10f);
 
     float normalGravity;
     float ladderGravity = 0f;
@@ -111,6 +112,8 @@ public class PlayerMovement : MonoBehaviour
         if (rb2d.IsTouchingLayers(LayerMask.GetMask("Enemy")))
         {
             isAlive = false;
+            animator.SetTrigger("Die");
+            rb2d.velocity = deathKick;
         }
     }
 }

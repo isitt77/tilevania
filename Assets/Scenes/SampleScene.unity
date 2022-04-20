@@ -8650,6 +8650,8 @@ MonoBehaviour:
     m_ParentHash: 756556552
   - m_Hash: 421803916
     m_ParentHash: 756556552
+  - m_Hash: -1482263730
+    m_ParentHash: 756556552
 --- !u!1 &1617426904 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4326126493423982085, guid: 33126a7a94d1a48e5b2146626470a4f1, type: 3}
@@ -13749,6 +13751,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 369759986, guid: 5ba74a5f156994fb5bd3a6403e35eac4, type: 3}
+      propertyPath: deathKick.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 369759986, guid: 5ba74a5f156994fb5bd3a6403e35eac4, type: 3}
+      propertyPath: deathKick.y
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5555781286849749764, guid: 5ba74a5f156994fb5bd3a6403e35eac4, type: 3}
       propertyPath: m_Size.x
       value: 0.31652594
