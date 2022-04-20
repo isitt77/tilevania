@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
     float normalGravity;
     float ladderGravity = 0f;
 
+    bool isAlive = true;
+
     Vector2 moveInput;
     Rigidbody2D rb2d;
     Animator animator;
@@ -31,14 +33,19 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Run();
-        FlipSprite();
-        ClimbLadder();
+        if (!isAlive) { return; }
+        {
+            Run();
+            FlipSprite();
+            ClimbLadder();
+            PlayerDie();
+        }
     }
 
 
     void OnMove(InputValue value)
     {
+        if (!isAlive) { return; }
         moveInput = value.Get<Vector2>();
         //Debug.Log(moveInput);
     }
@@ -50,6 +57,7 @@ public class PlayerMovement : MonoBehaviour
         //    return;
         //}
 
+        if (!isAlive) { return; }
         bool onGround = feetCollider2d.IsTouchingLayers(LayerMask.GetMask("Ground"));
 
         if(onGround && value.isPressed)
@@ -95,6 +103,14 @@ public class PlayerMovement : MonoBehaviour
         {
             rb2d.gravityScale = normalGravity;
             animator.SetBool("isClimbing", false);
+        }
+    }
+
+    void PlayerDie()
+    {
+        if (rb2d.IsTouchingLayers(LayerMask.GetMask("Enemy")))
+        {
+            isAlive = false;
         }
     }
 }
