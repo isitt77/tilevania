@@ -19,7 +19,7 @@ TagManager:
   - Background
   - Bounce
   - Enemy
-  - 
+  - Hazard
   - 
   - 
   - 
@@ -51,6 +51,9 @@ TagManager:
     locked: 0
   - name: Ladder
     uniqueID: 385016523
+    locked: 0
+  - name: Hazard
+    uniqueID: 18483695
     locked: 0
   - name: Platform Layer
     uniqueID: 3573066589

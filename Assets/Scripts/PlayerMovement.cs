@@ -109,7 +109,7 @@ public class PlayerMovement : MonoBehaviour
 
     void PlayerDie()
     {
-        if (rb2d.IsTouchingLayers(LayerMask.GetMask("Enemy")))
+        if (rb2d.IsTouchingLayers(LayerMask.GetMask("Enemy", "Hazard")))
         {
             isAlive = false;
             animator.SetTrigger("Die");
