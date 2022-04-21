@@ -9,6 +9,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float jumpSpeed = 5f;
     [SerializeField] float climbSpeed = 6f;
     [SerializeField] Vector2 deathKick = new Vector2(10f, 10f);
+    [SerializeField] Transform arrowSpawnPoint;
+    [SerializeField] GameObject arrow;
 
     float normalGravity;
     float ladderGravity = 0f;
@@ -20,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
     Animator animator;
     CapsuleCollider2D capCollider2d;
     BoxCollider2D feetCollider2d;
+
 
     // Start is called before the first frame update
     void Start()
@@ -67,6 +70,15 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    void OnFire(InputValue value)
+    {
+        if (!isAlive) { return; }
+        if (value.isPressed)
+        {
+            Instantiate(arrow, arrowSpawnPoint.position, transform.rotation);
+        }
+    }
+
 
     void Run()
     {
@@ -106,6 +118,7 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("isClimbing", false);
         }
     }
+
 
     void PlayerDie()
     {
