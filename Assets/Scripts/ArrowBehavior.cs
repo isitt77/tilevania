@@ -26,18 +26,14 @@ public class ArrowBehavior : MonoBehaviour
     }
 
 
-    //void OnTriggerEnter2D(Collider2D collision)
-    //{
-    //    if (collision.tag == "Enemy")
-    //    {
-    //        Destroy(collision.gameObject);
-    //        Destroy(arrow.gameObject);
-    //    }
-    //    if (!collision)
-    //    {
-    //        Destroy(arrow.gameObject, 0.3f);
-    //    }
-    //}
-
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Enemy")
+        {
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
+        }
+        Destroy(gameObject, 0.3f);
+    }
 
 }
