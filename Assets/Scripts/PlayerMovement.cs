@@ -75,7 +75,14 @@ public class PlayerMovement : MonoBehaviour
         if (!isAlive) { return; }
         if (value.isPressed)
         {
-            Instantiate(arrow, arrowSpawnPoint.position, transform.rotation);
+            if (rb2d.transform.localScale.x < Mathf.Epsilon)
+            {
+                Instantiate(arrow, arrowSpawnPoint.position, transform.rotation * Quaternion.Euler(0f, 180f, 0f));
+            }
+            else if (rb2d.transform.localScale.x > Mathf.Epsilon)
+            {
+                Instantiate(arrow, arrowSpawnPoint.position, transform.rotation);
+            }
         }
     }
 

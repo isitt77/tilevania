@@ -22,6 +22,22 @@ public class ArrowBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        arrow.velocity = new Vector2(vectorXspeed, arrow.velocity.y);
+        arrow.velocity = new Vector2(vectorXspeed, 0f);
     }
+
+
+    //void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    if (collision.tag == "Enemy")
+    //    {
+    //        Destroy(collision.gameObject);
+    //        Destroy(arrow.gameObject);
+    //    }
+    //    if (!collision)
+    //    {
+    //        Destroy(arrow.gameObject, 0.3f);
+    //    }
+    //}
+
+
 }
