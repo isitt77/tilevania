@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Vector2 deathKick = new Vector2(10f, 10f);
     [SerializeField] Transform arrowSpawnPoint;
     [SerializeField] GameObject arrow;
+    [SerializeField] float arrowLooseDelay = 0.5f;
 
     float normalGravity;
     float ladderGravity = 0f;
@@ -76,16 +77,20 @@ public class PlayerMovement : MonoBehaviour
         if (value.isPressed)
         {
             animator.SetTrigger("Shoot");
-            if (rb2d.transform.localScale.x < Mathf.Epsilon)
-            {
-                Instantiate(arrow, arrowSpawnPoint.position, transform.rotation * Quaternion.Euler(0f, 180f, 0f));
-            }
-            else if (rb2d.transform.localScale.x > Mathf.Epsilon)
-            {
-                Instantiate(arrow, arrowSpawnPoint.position, transform.rotation);
-            }
+            Invoke("DelayArrowLoose", arrowLooseDelay);
         }
-        //animator.SetBool("isShooting", false);
+    }
+
+    void DelayArrowLoose()
+    {
+        if (rb2d.transform.localScale.x < Mathf.Epsilon)
+        {
+            Instantiate(arrow, arrowSpawnPoint.position, transform.rotation * Quaternion.Euler(0f, 180f, 0f));
+        }
+        else if (rb2d.transform.localScale.x > Mathf.Epsilon)
+        {
+            Instantiate(arrow, arrowSpawnPoint.position, transform.rotation);
+        }
     }
 
 

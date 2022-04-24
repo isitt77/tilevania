@@ -13796,6 +13796,10 @@ PrefabInstance:
       propertyPath: arrow
       value: 
       objectReference: {fileID: 7856953235823240604, guid: a93d01aa6bb844280b53761c9189d647, type: 3}
+    - target: {fileID: 369759986, guid: 5ba74a5f156994fb5bd3a6403e35eac4, type: 3}
+      propertyPath: arrowLooseDelay
+      value: 0.12
+      objectReference: {fileID: 0}
     - target: {fileID: 5555781287085290524, guid: 5ba74a5f156994fb5bd3a6403e35eac4, type: 3}
       propertyPath: m_RootOrder
       value: 2
