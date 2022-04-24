@@ -75,6 +75,7 @@ public class PlayerMovement : MonoBehaviour
         if (!isAlive) { return; }
         if (value.isPressed)
         {
+            animator.SetTrigger("Shoot");
             if (rb2d.transform.localScale.x < Mathf.Epsilon)
             {
                 Instantiate(arrow, arrowSpawnPoint.position, transform.rotation * Quaternion.Euler(0f, 180f, 0f));
@@ -84,6 +85,7 @@ public class PlayerMovement : MonoBehaviour
                 Instantiate(arrow, arrowSpawnPoint.position, transform.rotation);
             }
         }
+        //animator.SetBool("isShooting", false);
     }
 
 
@@ -125,6 +127,11 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("isClimbing", false);
         }
     }
+
+    //void IsNotShooting()
+    //{
+    //    animator.SetBool("isShooting", false);
+    //}
 
 
     void PlayerDie()
