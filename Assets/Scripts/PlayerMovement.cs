@@ -77,17 +77,17 @@ public class PlayerMovement : MonoBehaviour
         if (value.isPressed)
         {
             animator.SetTrigger("Shoot");
-            Invoke("DelayArrowLoose", arrowLooseDelay);
+            Invoke("ArrowLoose", arrowLooseDelay);
         }
     }
 
-    void DelayArrowLoose()
+    void ArrowLoose()
     {
-        if (rb2d.transform.localScale.x < Mathf.Epsilon)
+        if (rb2d.transform.localScale.x < Mathf.Epsilon) // <-- Player facing left
         {
             Instantiate(arrow, arrowSpawnPoint.position, transform.rotation * Quaternion.Euler(0f, 180f, 0f));
         }
-        else if (rb2d.transform.localScale.x > Mathf.Epsilon)
+        if (rb2d.transform.localScale.x > Mathf.Epsilon) // <-- Player facing right
         {
             Instantiate(arrow, arrowSpawnPoint.position, transform.rotation);
         }
