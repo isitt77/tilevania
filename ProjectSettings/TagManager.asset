@@ -21,7 +21,7 @@ TagManager:
   - Enemy
   - Hazard
   - Arrow
-  - 
+  - Interactables
   - 
   - 
   - 
@@ -57,6 +57,9 @@ TagManager:
     locked: 0
   - name: Platform Layer
     uniqueID: 3573066589
+    locked: 0
+  - name: Interactables
+    uniqueID: 3664158683
     locked: 0
   - name: Player
     uniqueID: 2960589725
