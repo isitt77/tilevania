@@ -17949,15 +17949,15 @@ PrefabInstance:
       objectReference: {fileID: 5555781286849749752}
     - target: {fileID: 3081143623644217607, guid: 1d8b089d464b24dde9739a580261171e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.63123226
+      value: -2.4174147
       objectReference: {fileID: 0}
     - target: {fileID: 3081143623644217607, guid: 1d8b089d464b24dde9739a580261171e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.022304
+      value: 1.037785
       objectReference: {fileID: 0}
     - target: {fileID: 3081143623644217848, guid: 1d8b089d464b24dde9739a580261171e, type: 3}
       propertyPath: orthographic size
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3081143623815068457, guid: 1d8b089d464b24dde9739a580261171e, type: 3}
       propertyPath: m_RootOrder
@@ -18216,6 +18216,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5555781287085290525, guid: 5ba74a5f156994fb5bd3a6403e35eac4, type: 3}
       propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5555781287085290525, guid: 5ba74a5f156994fb5bd3a6403e35eac4, type: 3}
+      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
