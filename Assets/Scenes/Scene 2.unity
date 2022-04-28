@@ -726,6 +726,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Exit
       objectReference: {fileID: 0}
+    - target: {fileID: 5543867390608271493, guid: bc42467af3d7244529ea01b3c73b9b3d, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5543867390608271546, guid: bc42467af3d7244529ea01b3c73b9b3d, type: 3}
       propertyPath: m_RootOrder
       value: 1

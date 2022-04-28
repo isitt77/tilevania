@@ -32,13 +32,6 @@ public class GameSession : MonoBehaviour
     }
 
 
-    public void AddToScore(int pointsToAdd)
-    {
-        playerScore += pointsToAdd;
-        scoreText.text = playerScore.ToString();
-    }
-
-
     public void ProcessPlayerDeath()
     {
         if(numPlayerLives > 1)
@@ -49,6 +42,12 @@ public class GameSession : MonoBehaviour
         {
             ResetGameSession();
         }
+    }
+
+    public void AddToScore(int pointsToAdd)
+    {
+        playerScore += pointsToAdd;
+        scoreText.text = playerScore.ToString();
     }
 
     void TakeOneLife()
