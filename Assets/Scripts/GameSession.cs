@@ -23,6 +23,13 @@ public class GameSession : MonoBehaviour
         }
     }
 
+
+    void Start()
+    {
+        playerLivesText.text = numPlayerLives.ToString();    
+    }
+
+
     public void ProcessPlayerDeath()
     {
         if(numPlayerLives > 1)
@@ -40,6 +47,7 @@ public class GameSession : MonoBehaviour
         numPlayerLives--;
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentSceneIndex);
+        playerLivesText.text = numPlayerLives.ToString();
     }
 
     void ResetGameSession()
